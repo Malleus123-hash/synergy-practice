@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наименование организации, на базе которой проходит практическая подготовка</title>
+
+    <!-- Подключаем шрифты Google Fonts: фирменный + 5 альтернатив -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=PT+Sans:wght@400;700&family=Oswald:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Фирменный шрифт «Синергии» — гротеск Montserrat (близок к корпоративному Proxima Nova) */
+            --font-brand: 'Montserrat', sans-serif;
+
+            /* Фирменные цвета университета */
+            --color-primary: #e2001a;   /* красный «Синергии» */
+            --color-dark:    #1a1a1a;
+            --color-grey:    #555;
+            --color-bg:      #f5f5f7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-brand);
+            background: var(--color-bg);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(135deg, var(--color-primary), #a00012);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-weight: 800;
+            font-size: clamp(22px, 4vw, 38px);
+            letter-spacing: 0.5px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header .org {
+            margin-top: 18px;
+            font-size: clamp(28px, 6vw, 56px);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Контейнер */
+        main {
+            max-width: 900px;
+            margin: -30px auto 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            padding: 40px;
+        }
+
+        section { margin-bottom: 28px; }
+
+        h2 {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 22px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--color-primary);
+            padding-left: 12px;
+        }
+
+        p, li { color: var(--color-grey); font-size: 17px; }
+        ul { padding-left: 22px; margin-top: 8px; }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .info-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+        }
+        .info-table td:first-child {
+            font-weight: 600;
+            color: var(--color-dark);
+            width: 38%;
+        }
+
+        /* Блок выбора шрифта */
+        .font-switcher {
+            background: #fafafa;
+            border: 1px dashed #ccc;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .font-switcher h2 { border-left-color: #888; color: #333; }
+        .font-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+        .font-buttons button {
+            cursor: pointer;
+            border: 1px solid var(--color-primary);
+            background: #fff;
+            color: var(--color-primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all .2s;
+        }
+        .font-buttons button:hover,
+        .font-buttons button.active {
+            background: var(--color-primary);
+            color: #fff;
+        }
+        .hint { font-size: 13px; color: #999; margin-top: 12px; }
+
+        footer {
+            text-align: center;
+            color: #aaa;
+            font-size: 13px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Наименование организации, на базе которой Вы проходите практическую подготовку</h1>
+        <div class="org">Университет «Синергия»</div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Об организации</h2>
+            <p>
+                Университет «Синергия» (Московский финансово-промышленный университет
+                «Синергия») — один из крупнейших негосударственных вузов России. Ведёт
+                образовательную деятельность с 1988 года и готовит специалистов в области
+                бизнеса, экономики, менеджмента, информационных технологий, дизайна,
+                юриспруденции, спорта и индустрии гостеприимства.
+            </p>
+        </section>
+
+        <section>
+            <h2>Основные сведения</h2>
+            <table class="info-table">
+                <tr><td>Полное наименование</td><td>Образовательное частное учреждение высшего образования «Московский финансово-промышленный университет „Синергия“»</td></tr>
+                <tr><td>Год основания</td><td>1988</td></tr>
+                <tr><td>Расположение</td><td>г. Москва, Ленинградский проспект, д. 80</td></tr>
+                <tr><td>Тип</td><td>Негосударственный вуз</td></tr>
+                <tr><td>Сайт</td><td><a href="https://synergy.ru" target="_blank" rel="noopener">synergy.ru</a></td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Направления подготовки</h2>
+            <ul>
+                <li>Экономика и финансы</li>
+                <li>Менеджмент и управление бизнесом</li>
+                <li>Информационные технологии и программирование</li>
+                <li>Дизайн и креативные индустрии</li>
+                <li>Юриспруденция</li>
+                <li>Спортивный менеджмент</li>
+            </ul>
+        </section>
+
+        <div class="font-switcher">
+            <h2>Выбор шрифта</h2>
+            <p>Текст отображается фирменным гротеском <strong>Montserrat</strong>
+               (близок к корпоративному стилю «Синергии»). Ниже — 5 альтернативных шрифтов,
+               нажмите, чтобы переключить:</p>
+            <div class="font-buttons">
+                <button class="active" data-font="'Montserrat', sans-serif">Montserrat (фирменный)</button>
+                <button data-font="'Roboto', sans-serif">Roboto</button>
+                <button data-font="'Open Sans', sans-serif">Open Sans</button>
+                <button data-font="'PT Sans', sans-serif">PT Sans</button>
+                <button data-font="'Oswald', sans-serif">Oswald</button>
+                <button data-font="'Inter', sans-serif">Inter</button>
+            </div>
+            <p class="hint">Текущий шрифт применяется ко всей странице.</p>
+        </div>
+    </main>
+
+    <footer>
+        Страница сгенерирована для отчёта о практической подготовке · Университет «Синергия»
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.font-buttons button');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.documentElement.style.setProperty('--font-brand', btn.dataset.font);
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
